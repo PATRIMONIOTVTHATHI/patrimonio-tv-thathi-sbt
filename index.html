@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patrimônio TV THATHI SBT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>CADASTRO DE PATRIMÔNIO TV THATHI SBT</h1> <!-- Agora em maiúsculas -->
+    </header>
+
+    <main>
+        <!-- Formulário de Cadastro -->
+        <form id="formCadastro">
+            <label for="setor">Setor:</label>
+            <input type="text" id="setor" name="setor" required>
+
+            <label for="item_foto">Foto do Equipamento:</label>
+            <input type="file" id="item_foto" name="item_foto" accept="image/*" required>
+
+            <label for="fabricante">Fabricante:</label>
+            <input type="text" id="fabricante" name="fabricante" required>
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="item_data_fabricacao">Data de Fabricação:</label>
+            <input type="date" id="item_data_fabricacao" name="item_data_fabricacao" required>
+
+            <label for="num_serie">Número de Série:</label>
+            <input type="text" id="num_serie" name="num_serie" required>
+
+            <label for="patrimonio">Patrimônio:</label>
+            <input type="text" id="patrimonio" name="patrimonio" required>
+
+            <label for="mac">MAC:</label>
+            <input type="text" id="mac" name="mac" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao" required></textarea>
+
+            <label for="situacao">Situação:</label>
+            <select id="situacao" name="situacao" required>
+                <option value="Ativo">Ativo</option>
+                <option value="Em Manutenção">Em Manutenção</option>
+                <option value="Inativo">Inativo</option>
+            </select>
+
+            <h3>Contato do Fornecedor</h3>
+            <label for="contato_nome">Nome do Fornecedor:</label>
+            <input type="text" id="contato_nome" name="contato_nome" required>
+
+            <label for="contato_telefone">Telefone:</label>
+            <input type="text" id="contato_telefone" name="contato_telefone" required>
+
+            <label for="contato_email">E-mail:</label>
+            <input type="email" id="contato_email" name="contato_email" required>
+
+            <!-- Seção de Manutenção -->
+            <h3>Manutenção</h3>
+            <label for="manutencao">Há manutenção?</label>
+            <select id="manutencao" name="manutencao" required>
+                <option value="Não">Não</option>
+                <option value="Sim">Sim</option>
+            </select>
+
+            <!-- Detalhes da Manutenção, apenas exibido se a manutenção for "Sim" -->
+            <div id="manutencaoDetalhes" style="display:none;">
+                <label for="local_manutencao">Local de Manutenção:</label>
+                <input type="text" id="local_manutencao" name="local_manutencao">
+
+                <label for="contato_manutencao">Contato para Manutenção:</label>
+                <input type="text" id="contato_manutencao" name="contato_manutencao">
+
+                <label for="entrada_data">Data de Entrada:</label>
+                <input type="date" id="entrada_data" name="entrada_data">
+
+                <label for="status_manutencao">Status de Manutenção:</label>
+                <select id="status_manutencao" name="status_manutencao">
+                    <option value="Concluído">Concluído</option>
+                    <option value="Em andamento">Em andamento</option>
+                    <option value="Aguardando Peças">Aguardando Peças</option>
+                </select>
+
+                <label for="data_retorno">Data de Retorno:</label>
+                <input type="date" id="data_retorno" name="data_retorno">
+            </div>
+
+            <button type="submit">Cadastrar Patrimônio</button>
+        </form>
+
+        <h2>Equipamentos Cadastrados</h2>
+        <table id="equipamentos-tabela">
+            <thead>
+                <tr>
+                    <th>Setor</th>
+                    <th>Equipamento</th>
+                    <th>Detalhes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados dos equipamentos aparecerão aqui -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - TV THATHI SBT</p> <!-- Alterado o nome no rodapé -->
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+
+
+
